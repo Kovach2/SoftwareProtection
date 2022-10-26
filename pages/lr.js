@@ -10,7 +10,7 @@ export default function LR1() {
         <div className={styles.page}>
             <header className={styles.header}>
                 <div className={styles.header_inner}>
-                    <Link href={"#"} className={styles.button}>
+                    <Link href={"/"} className={styles.button}>
                         На главную
                     </Link>
                     <div className={styles.header_logo}>
