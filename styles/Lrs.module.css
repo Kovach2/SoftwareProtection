@@ -9,7 +9,8 @@
 
 .wrapper {
     max-width: 1730px;
-    margin: 0 30px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 .header{
@@ -131,7 +132,7 @@
 }
 
 .labs_buttons:last-child a:nth-child(2){
-    margin: 0;
+    margin-left: 60px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -182,6 +183,10 @@
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    .labs_buttons:last-child a:nth-child(2){
+        margin: 0;
+    }
 }
 
 @media screen and (max-width: 939px){
@@ -213,6 +218,13 @@
         max-width: 456px;
     }
 
+    .labs_buttons:last-child{
+        margin-top: 40px;
+    }
+
+    .labs_buttons:last-child a:nth-child(2){
+        margin-top: 40px;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -237,5 +249,9 @@
 @media screen and (max-width: 576px){
     .header_logo{
         display: none;
+    }
+
+    .button:nth-child(1){
+        margin-right: 10px;
     }
 }

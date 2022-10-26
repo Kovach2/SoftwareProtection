@@ -101,9 +101,12 @@
     height: 100%;
   }
   .button{
+    display: block;
+    width: 300px;
     margin: 0 auto;
   }
   .button_lr{
+    display: block;
     margin: 0 auto;
     margin-bottom: 40px;
   }
@@ -115,19 +118,24 @@
     font-size: 32px;
   }
   .button_lr{
-    padding-left: 25px;
+    display: block;
+    text-align: center;
+    padding: 7px 0;
     max-width:325px;
     font-size: 22px;
   }
 
   .button{
-    padding: 15px 15px;
-    margin: 0;
-    max-width: 100%;
+    max-width: 325px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    padding: 5px 0 0 0;
+
+    height: 57px;
     font-size: 22px;
   }
   .buttons_lineUnder{
-    display: block;
     margin: 0;
   }
 }
