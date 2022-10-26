@@ -1,0 +1,25 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: linear-gradient(248.44deg, #342E2E 18.95%, rgba(172, 96, 96, 0) 78.13%);
+}
+
+@media screen and (max-width: 576px) {
+
+}
+@media screen and (max-width: 768px) {
+
+}
+@media screen and (max-width: 992px) {
+
+}
+@media screen and (max-width: 1200px) {
+
+}
+@media screen and (max-width: 1400px) {
+
+}

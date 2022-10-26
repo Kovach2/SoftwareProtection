@@ -1,0 +1,133 @@
+.home{
+  height: 100vh;
+  background: center no-repeat url("../public/mainPage/background.png");
+  background-size: cover;
+  text-align: center;
+}
+
+.title{
+  padding-top: 200px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 86px;
+  line-height: 156px;
+  color: #FFFFFF;
+}
+
+
+
+.buttons{
+  margin: 0 20px;
+}
+
+.buttons_lineUnder{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 85px;
+  max-width: 730px;
+  margin: 0 auto;
+  padding-top: 35px;
+}
+
+.buttons_line{
+  display: flex;
+
+  justify-content: space-between;
+  text-align: center;
+  height: 85px;
+  max-width: 730px;
+  margin: 0 auto;
+}
+
+
+
+.button {
+  max-width: 300px;
+  height: 85px;
+  font-family: 'Montserrat';
+  text-decoration: none;
+  max-width: 368px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 44px;
+  color: #FFFFFF;
+  border-radius: 57px;
+  padding: 20px 15px;
+  background: #172825;
+  transition: all 0.2s ease;
+}
+
+.button_lr{
+  max-width: 300px;
+  text-decoration: none;
+  padding: 0 15px;
+  display: flex;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 44px;
+  color: #FFFFFF;
+  border-radius: 57px;
+  background: #172825;
+  transition: all 0.2s ease;
+}
+
+
+.button:hover{
+  background: #2D4B46;
+}
+
+.button_lr:hover{
+  background: #2D4B46;
+}
+
+@media screen and (max-width: 992px) {
+  .title{
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title{
+    font-size: 48px;
+    padding-top: 75px;
+  }
+  .buttons_line{
+    display: block;
+    height: 100%;
+  }
+  .button{
+    margin: 0 auto;
+  }
+  .button_lr{
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .title{
+    padding-top: 70px;
+    font-size: 32px;
+  }
+  .button_lr{
+    padding-left: 25px;
+    max-width:325px;
+    font-size: 22px;
+  }
+
+  .button{
+    padding: 15px 15px;
+    margin: 0;
+    max-width: 100%;
+    font-size: 22px;
+  }
+  .buttons_lineUnder{
+    display: block;
+    margin: 0;
+  }
+}
