@@ -5,7 +5,7 @@ import rightBiceps from '/public/mainPageLabs/rightBiceps.png'
 import leftBiceps from '/public/mainPageLabs/leftBiceps.png'
 
 
-export default function LR1() {
+export default function LRS() {
     return (
         <div className={styles.page}>
             <header className={styles.header}>
@@ -31,8 +31,8 @@ export default function LR1() {
                         </div>
                         <div className={styles.labs_bg}>
                             <div className={styles.labs_buttons}>
-                                <a href="#" className={styles.button_lab}>Лабораторная работа №1</a>
-                                <a href="#" className={styles.button_lab}>Лабораторная работа №2</a>
+                                <Link href={"#"} className={styles.button_lab}>Лабораторная работа №1</Link>
+                                <Link href={"lr2"} className={styles.button_lab}>Лабораторная работа №2</Link>
                                 <a href="#" className={styles.button_lab}>Лабораторная работа №3</a>
                             </div>
                             <div class={styles.labs_buttons}>
