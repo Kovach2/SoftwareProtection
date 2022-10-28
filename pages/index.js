@@ -1,6 +1,9 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/style.module.css'
+import home from '../styles/Home.module.css'
+
 import Link from 'next/link'
+import classNames from "classnames";
 
 export default function Home() {
     return (
@@ -8,14 +11,14 @@ export default function Home() {
             <Head>
                 <title>Home</title>
             </Head>
-            <main className={styles.home}>
-                <h1 className={styles.title}>Software protection</h1>
-                <div className={styles.buttons}>
-                    <div className={styles.buttons_line}>
-                        <Link href={"lrsPage"} className={styles.button_lr}>Лабораторные работы</Link>
-                        <Link href={"#"} className={styles.button}>Документация</Link>
+            <main className={home.home}>
+                <h1 className={home.title}>Software protection</h1>
+                <div className={home.buttons}>
+                    <div className={home.buttons_line}>
+                        <Link href={"lrsPage"} className={home.button_lr}>Лабораторные работы</Link>
+                        <Link href={"#"} className={classNames(styles.button, home.button)}>Документация</Link>
                     </div>
-                    <div className={styles.buttons_lineUnder}><Link href={"#"} className={styles.button}>Разработчики</Link>
+                    <div className={home.buttons_lineUnder}><Link href={"#"} className={classNames( home.button, styles.button)}>Разработчики</Link>
                     </div>
                 </div>
             </main>

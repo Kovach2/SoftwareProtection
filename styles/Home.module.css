@@ -19,13 +19,14 @@
 
 .buttons{
   margin: 0 20px;
+  font-size: 25px;
 }
 
 .buttons_lineUnder{
   display: flex;
   justify-content: center;
   text-align: center;
-  height: 85px;
+  height: 75px;
   max-width: 730px;
   margin: 0 auto;
   padding-top: 35px;
@@ -33,10 +34,10 @@
 
 .buttons_line{
   display: flex;
-
+  font-size: 25px;
   justify-content: space-between;
   text-align: center;
-  height: 85px;
+  height: 75px;
   max-width: 730px;
   margin: 0 auto;
 }
@@ -44,45 +45,34 @@
 
 
 .button {
+  padding: 15px 22px;
+  font-size: 25px;
+  height: 75px;
   max-width: 300px;
-  height: 85px;
-  font-family: 'Montserrat';
-  text-decoration: none;
-  max-width: 368px;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 44px;
-  color: #FFFFFF;
-  border-radius: 57px;
-  padding: 20px 15px;
-  background: #172825;
-  transition: all 0.2s ease;
 }
 
 .button_lr{
-  max-width: 300px;
+  padding: 15px 22px;
+  max-width: 400px;
+  width: 100%;
+  background: rgba(7, 17, 33, 0.66);
+  border-radius: 57px;
   text-decoration: none;
-  padding: 0 15px;
-  display: flex;
-  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 25px;
   line-height: 44px;
-  color: #FFFFFF;
-  border-radius: 57px;
-  background: #172825;
-  transition: all 0.2s ease;
+  text-align: center;
+  color: #C4EFF9;
+  transition: color,background-color 0.2s ease;
 }
 
 
-.button:hover{
-  background: #2D4B46;
-}
 
 .button_lr:hover{
-  background: #2D4B46;
+  outline: 1px solid #000;
+  background: rgba(83, 194, 219, 0.64);
+  color: #FFFFFF;
 }
 
 @media screen and (max-width: 992px) {

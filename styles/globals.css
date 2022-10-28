@@ -24,6 +24,12 @@ body{
   font-family: 'Montserrat';
 }
 
+input[type=radio] {
+  position: absolute;
+  visibility: hidden;
+  display: none;
+}
+
 @media screen and (max-width: 576px) {
 
 }

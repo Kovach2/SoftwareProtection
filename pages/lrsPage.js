@@ -33,10 +33,10 @@ export default function LRS() {
                             <div className={styles.labs_buttons}>
                                 <Link href={"#"} className={styles.button_lab}>Лабораторная работа №1</Link>
                                 <Link href={"lr2"} className={styles.button_lab}>Лабораторная работа №2</Link>
-                                <a href="#" className={styles.button_lab}>Лабораторная работа №3</a>
+                                <Link href={"lr3"} className={styles.button_lab}>Лабораторная работа №3</Link>
                             </div>
                             <div class={styles.labs_buttons}>
-                                <a href="#" className={styles.button_lab}>Лабораторная работа №4</a>
+                                <Link href={"lr4"} className={styles.button_lab}>Лабораторная работа №4</Link>
                                 <a href="#" className={styles.button_lab}>Лабораторная работа №5</a>
                                 <a href="#" className={styles.button_lab}>Лабораторная работа №6</a>
                             </div>

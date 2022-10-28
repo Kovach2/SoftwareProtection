@@ -1,0 +1,108 @@
+.ex1{
+    padding: 0 60px;
+}
+
+.ex1_inner{
+
+}
+
+/* ex2 */
+
+.ex2{
+    padding: 0 60px;
+}
+
+.ex2_inner{
+    display: flex;
+}
+
+.form{
+    max-width: 1560px;
+    width: 100%;
+    margin: 0 auto 90px auto;
+}
+.radio_group{
+    display: flex;
+}
+
+
+.label_radio{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 13px 40px;
+    max-width: 260px;
+    height: 70px;
+    width: 100%;
+    color: #000000;
+    cursor: pointer;
+    font-weight: bold;
+    background: linear-gradient(266.75deg, #009BFF 20.17%, rgba(156, 216, 255, 0.532746) 55.67%, rgba(26, 157, 241, 0) 88.45%);
+    border: 1px solid #000000;
+    transition: all 0.3s ease;
+}
+
+.input_radio:checked + .label_radio{
+    background: linear-gradient(266.75deg, #009BFF 20.17%, rgba(156, 216, 255, 0.532746) 55.67%, rgba(26, 157, 241, 0) 88.45%);
+    border: 1px solid #000000;
+    box-shadow: 0px 12px 0px 0.5px rgba(0, 0, 0, 0.25);
+    transform: translate(0px,-12px);
+}
+
+
+.label_radio:nth-child(2){
+    border-radius: 31px 0px 0px 31px;
+}
+
+
+.label_radio:nth-last-child(1){
+    border-radius: 0px 31px 31px 0px;
+}
+
+.input_lr4{
+    max-width: 815px;
+    margin: 0 auto;
+}
+
+.button_click{
+    display: block;
+    max-width: 245px;
+    margin: 72px auto 64px auto;
+    padding: 29px 22px;
+}
+
+.input_lr4_cows{
+
+}
+
+.buttons{
+    display: flex;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.main_win{
+    width: 100%;
+}
+
+.cows_text{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #C4EFF9;
+}
+
+.cows{
+    display: block;
+    width: 100%;
+}
+
+.buls{
+    display: block;
+    width: 100%;
+}
