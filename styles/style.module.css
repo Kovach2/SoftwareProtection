@@ -54,6 +54,10 @@
     transition: color,background-color 0.2s ease;
 }
 
+.labWorkinArea{
+    margin-bottom: 100px;
+}
+
 .button:hover{
     outline: 1px solid #000;
     background: rgba(83, 194, 219, 0.64);
