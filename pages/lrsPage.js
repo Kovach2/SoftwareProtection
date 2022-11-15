@@ -1,8 +1,8 @@
 import styles from '../styles/Lrs.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
-import rightBiceps from '/public/mainPageLabs/rightBiceps.png'
-import leftBiceps from '/public/mainPageLabs/leftBiceps.png'
+import rightBiceps from '../public/mainPageLabs/rightBiceps.png'
+import leftBiceps from '../public/mainPageLabs/leftBiceps.png'
 
 
 export default function LRS() {
@@ -31,7 +31,7 @@ export default function LRS() {
                         </div>
                         <div className={styles.labs_bg}>
                             <div className={styles.labs_buttons}>
-                                <Link href={"#"} className={styles.button_lab}>Лабораторная работа №1</Link>
+                                <Link href={"lr1"} className={styles.button_lab}>Лабораторная работа №1</Link>
                                 <Link href={"lr2"} className={styles.button_lab}>Лабораторная работа №2</Link>
                                 <Link href={"lr3"} className={styles.button_lab}>Лабораторная работа №3</Link>
                             </div>
