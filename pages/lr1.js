@@ -163,7 +163,7 @@ export default function LR1() {
                                 <div className={lr1.ex_condition}>
                                     <div className={lr1.ex_condition__title}>Условие</div>
                                     <div className={lr1.ex_condition__description}>
-                                        1. b1,b2...b1+q - случайные символы из множества "!,”,#,$,%,&,’,(,),*", где
+                                        1. b1,b2...b1+q - случайные символы из множества !,”,#,$,%,&,’,(,),*, где
                                         Q=Nmod5. <br/>
                                         2. Оставшиеся символы пароля, кроме b9 , - случайные малые буквы русские
                                         алфавита. <br/>
