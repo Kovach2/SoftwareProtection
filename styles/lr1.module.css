@@ -1,0 +1,245 @@
+.labWorkinArea{
+    margin-top: 100px;
+    background: rgba(0, 0, 0, 0.15);
+    border: 10px solid rgba(0, 0, 0, 0.15);
+    border-radius: 60px;
+    margin-bottom: 100px;
+}
+
+.devision_line{
+    border: 7px solid rgba(0, 0, 0, 0.15);
+}
+
+.ex1{
+}
+
+.exInner{
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Zadanie 1*/
+
+/* PVT */
+
+/* Input */
+
+.input{
+    display: block;
+    background: rgba(17, 28, 71, 0.31);
+    border: 2px solid #061653;
+    width: 410px;
+    height: 72px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #BDDFF1;
+    margin-bottom: 24px;
+}
+
+.PVT__input{
+    display: flex;
+    align-items: center;
+}
+
+.input__name{
+    margin-top: -10px;
+    margin-right: 5px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    color: #061653;
+}
+
+
+.input__block{
+    text-align: center;
+}
+
+.input__description{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: #BDDFF1;
+}
+
+
+.mainInput{
+    width: 100%;
+    max-width: 400px;
+    height: 65px;
+
+}
+
+/* PVT button*/
+
+.PVT__buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lr1_button{
+    width: 100%;
+    max-width: 227px;
+    height: 64px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #BDDFF1;
+    background: #1B97D9;
+    border-radius: 57px;
+    border: none;
+    margin-bottom: 35px;
+}
+
+.lr1_button:hover{
+    outline: none;
+    background: #42B7F5;
+}
+
+/* Generate Password */
+
+.generate_password{
+    display: flex;
+}
+
+.data_input{
+    width: 463px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.data_input .PVT__input:nth-child(2){
+    margin-left: -53px;
+}
+
+.input__description_big{
+    margin-bottom: 10px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #061653;
+}
+
+/* Choice */
+.generate_password_choice{
+    padding: 25px 35px;
+    background: #A1EEFF;
+    border: 1px solid #000000;
+    border-radius: 19px;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    max-height: 235px;
+}
+
+.checkbox{
+    display: none;
+    opacity: 0;
+}
+
+.checkbox ~ label{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-bottom: -5px;
+}
+
+.checkbox ~ label::before {
+    width: 14px;
+    height: 14px;
+    padding: 3px;
+    content: "";
+    display: inline-block;
+    background: center no-repeat url('../public/lr1/uncheak.png');
+    background-size: cover;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+.checkbox:checked ~ label::before {
+    content: "";
+    background: center no-repeat url('../public/lr1/cheak.png');
+    background-size: cover;
+    background-color: #ffffff;
+    border: 1px solid green;
+}
+
+
+/* ex2 */
+
+.ex2{
+    text-align: center;
+    width: 100%;
+    padding-bottom: 120px;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.choice_variat{
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    appearance: none;
+}
+
+.choice_variat:focus{
+    outline: 0;
+}
+
+.ex_condition{
+
+}
+
+.ex_condition__title{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #061653;
+}
+
+.ex_condition__description{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    background: rgba(17, 28, 71, 0.31);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 37px;
+    padding: 10px 25px;
+    text-align: left;
+    max-width: 390px;
+    height: 183px;
+}
+
+.ex_complete{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 513px;
+}

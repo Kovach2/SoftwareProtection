@@ -3,11 +3,13 @@ import Link from 'next/link'
 import Image from 'next/image'
 import rightBiceps from '../public/mainPageLabs/rightBiceps.png'
 import leftBiceps from '../public/mainPageLabs/leftBiceps.png'
+import PageHead from "../components/head";
 
 
 export default function LRS() {
     return (
         <div className={styles.page}>
+            <PageHead title={"Лабораторные работы"}/>
             <header className={styles.header}>
                 <div className={styles.header_inner}>
                     <Link href={"/"} className={styles.button}>

@@ -12,6 +12,7 @@ import style from '../styles/style.module.css'
 // Img
 import leftBiceps from "../public/mainPageLabs/leftBiceps.png";
 import rightBiceps from "../public/mainPageLabs/rightBiceps.png";
+import PageHead from "../components/head";
 
 function clear(){
     let result = document.querySelector(".lr4_input_lr4__yKvgv")
@@ -144,7 +145,7 @@ let zadanie2 = function (){
 export default function LR2() {
     return (
         <div className={style.wrapper}>
-            <Head><title>LR4</title></Head>
+            <PageHead title={"Лабораторная работа 4"}/>
             <header className={style.header}>
                 <div className={style.header_inner}>
                     <Link href={"/"} className={classNames(style.button, style.button_header)}>

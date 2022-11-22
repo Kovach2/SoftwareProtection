@@ -4,13 +4,12 @@ import home from '../styles/Home.module.css'
 
 import Link from 'next/link'
 import classNames from "classnames";
+import PageHead from "../components/head";
 
 export default function Home() {
     return (
         <div className={styles.container}>
-            <Head>
-                <title>Home</title>
-            </Head>
+            <PageHead title={"Главная"}/>
             <main className={home.home}>
                 <h1 className={home.title}>Software protection</h1>
                 <div className={home.buttons}>

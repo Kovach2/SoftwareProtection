@@ -12,6 +12,7 @@ import style from '../styles/style.module.css'
 // Img
 import leftBiceps from "../public/mainPageLabs/leftBiceps.png";
 import rightBiceps from "../public/mainPageLabs/rightBiceps.png";
+import PageHead from "../components/head";
 
 let zadanie1 = function () {
     // Элементы страницы
@@ -236,7 +237,7 @@ let magicCube = function () {
 export default function LR2() {
     return (
         <div className={style.wrapper}>
-            <Head><title>LR2</title></Head>
+            <PageHead title={"Лабораторная работа 2"}/>
             <header className={style.header}>
                 <div className={style.header_inner}>
                     <Link href={"/"} className={classNames(style.button, style.button_header)}>
