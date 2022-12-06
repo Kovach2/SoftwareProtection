@@ -1,0 +1,158 @@
+.wrapper{
+    max-width: 100%;
+    margin: 70px 20px 100px 20px;
+}
+
+.center{
+    margin: 0 auto;
+}
+
+.ex1_wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ex1_choice{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.Inputs_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.input__block{
+    width: 700px;
+}
+
+
+.input{
+    max-width: 400px;
+    margin-bottom:30px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.stroka{
+    display: block;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 700px;
+
+}
+
+.none_active{
+    display: none;
+}
+
+.button_ex1{
+    margin-left: 20px;
+}
+
+.table_numbers{
+    display: block;
+}
+
+
+.buttons{
+    display: flex;
+    height: 50px;
+}
+.reset{
+    padding: 0 65px 0 65px;
+}
+
+
+.ex2_wrapper{
+    margin: 0 155px;
+}
+
+.alfs{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.alf_wrapper{
+    text-align: center;
+}
+
+.alf_title{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.method{
+    margin-top: 20px;
+}
+
+.method__title{
+    text-align: center;
+    max-width: 153px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    border: 2px solid #82F8E9;
+}
+
+.method_input_block{
+    margin-top: 15px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.metod_input{
+    display: block;
+    margin: 0;
+    width: 600px;
+    height: 80px;
+}
+
+.method__button{
+    margin-left: 35px;
+    width: 150px;
+    height: 65px;
+}
+
+.method_tables{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.find_table{
+    margin-bottom: 50px;
+}
+
+.find_table td{
+    font-size: 20px;
+    padding: 15px;
+}
+
+.find_table tr:nth-child(1) td{
+    padding: 15px;
+}
+
+
+.result_table{
+    margin-top: 30px;
+}
