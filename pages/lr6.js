@@ -9,7 +9,6 @@ import rightBiceps from "../public/mainPageLabs/rightBiceps.png";
 import lr1 from "../styles/lr1.module.css";
 import lr6 from "../styles/lr6.module.css";
 
-import ElGamal from '../MyScripts/elgamal_src';
 
 import {useEffect, useState} from "react";
 
@@ -67,7 +66,7 @@ export default function LR6(){
                     <hr className={lr1.devision_line}/>
                     <div className={style.ex_count}>Задание 2</div>
                     <input className={classNames(style.input,lr6.rsa_input)} id="input_el"/>
-                    <button className={classNames(style.button, lr6.rsa_button)} onClick={run} id="button_el">{buttonText2}</button>
+                    <button className={classNames(style.button, lr6.rsa_button)} id="button_el">{buttonText2}</button>
                 </div>
             </main>
         </div>
