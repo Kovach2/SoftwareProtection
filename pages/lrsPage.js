@@ -17,7 +17,7 @@ export default function LRS() {
                     </Link>
                     <div className={styles.header_logo}>
                         <Image className={styles.leftBiceps} src={leftBiceps} width={80} height={80}/>
-                        <div class={styles.header_logotext}>54 тп</div>
+                        <div className={styles.header_logotext}>54 тп</div>
                         <Image className={styles.rightBiceps} src={rightBiceps} width={80} height={80}/>
                     </div>
                     <Link href={"#"} className={styles.button}>
@@ -34,22 +34,30 @@ export default function LRS() {
                         <div className={styles.labs_bg}>
                             <div className={styles.labs_buttons}>
                                 <Link href={"lr1"} className={styles.button_lab}>Лабораторная работа №1</Link>
+                                <Link href={"lr6"} className={styles.button_lab}>Лабораторная работа №6</Link>
+
+                            </div>
+                            <div class={styles.labs_buttons}>
                                 <Link href={"lr2"} className={styles.button_lab}>Лабораторная работа №2</Link>
+                                <Link href={"lr7"} className={styles.button_lab}>Лабораторная работа №7</Link>
+
+                            </div>
+                            <div class={styles.labs_buttons}>
                                 <Link href={"lr3"} className={styles.button_lab}>Лабораторная работа №3</Link>
+                                <Link href={"lr8"} className={styles.button_lab}>Лабораторная работа №8</Link>
+
+
                             </div>
                             <div class={styles.labs_buttons}>
                                 <Link href={"lr4"} className={styles.button_lab}>Лабораторная работа №4</Link>
-                                <a href={"lr5"} className={styles.button_lab}>Лабораторная работа №5</a>
-                                <a href="#" className={styles.button_lab}>Лабораторная работа №6</a>
+                                <Link href={"lr9"} className={styles.button_lab}>Лабораторная работа №9</Link>
                             </div>
-                            <div class={styles.labs_buttons}>
-                                <a href="#" className={styles.button_lab}>Лабораторная работа №7</a>
-                                <a href="#" className={styles.button_lab}>Лабораторная работа №8</a>
-                                <a href="#" className={styles.button_lab}>Лабораторная работа №9</a>
+                            <div className={styles.labs_buttons}>
+                                <Link href={"lr5"} className={styles.button_lab}>Лабораторная работа №5</Link>
+                                <Link href={"lr10"} className={styles.button_lab}>Лабораторная работа №10</Link>
                             </div>
-                            <div class={styles.labs_buttons}>
-                                <a href="#" className={styles.button_lab}>Лабораторная работа №10</a>
-                                <a href="#" className={styles.button_lab}>Лабораторная работа №11</a>
+                            <div className={styles.labs_buttons}>
+                                <Link href={"lr11"} className={styles.button_lab}>Лабораторная работа №11</Link>
                             </div>
                         </div>
                     </div>

@@ -33,7 +33,6 @@
 }
 
 .header_logotext{
-    font-family: 'Montserrat';
     max-width: 62px;
     font-style: normal;
     font-weight: 700;
@@ -51,7 +50,6 @@
 
 .button {
     width: 220px;
-    font-family: 'Montserrat';
     text-decoration: none;
     font-style: normal;
     font-weight: 700;
@@ -86,49 +84,55 @@
 }
 
 .button_lab{
-    background: #172825;
-    border-radius: 97px;
-    max-width: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(7, 17, 33, 0.66);
+    border-radius: 30px;
+    width: 100%;
+    max-width: 400px;
+    height: 100px;
     text-decoration: none;
-    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     text-align: center;
-    padding: 15px 15px;
     color: #FFFFFF;
     transition: all 0.2s ease;
+
 }
 
 
 
 .button_lab:hover{
-    background: #2D4B46;
+    background: #1E1F22;
 }
 
 .labs_bg{
-    max-width: 990px;
+    max-width: 1400px;
     margin: 70px auto 100px auto;
-    padding: 50px 70px;
-    background: #885353;
-    border-radius: 38px;
+    padding: 95px;
+    background: rgba(151, 172, 184, 0.08);
+    box-shadow: 4px 4px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
 }
 
 .labs_buttons{
     display: flex;
+    margin: 100px 100px 0px 100px;
     justify-content: space-between;
-    margin-top: 60px;
+
 }
 
 
 
 .labs_buttons:nth-child(1){
-    margin: 0;
+    margin-top: 0;
 }
 
 .labs_buttons:last-child{
     justify-content: center;
-    margin: 60px auto 0 auto;
+    margin: 100px auto 0 auto;
 }
 
 .labs_buttons:last-child a:nth-child(2){
