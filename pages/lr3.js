@@ -10,34 +10,31 @@ import lr1 from "../styles/lr1.module.css";
 import lr6 from "../styles/lr6.module.css";
 import Playfair from '../MyScripts/playfair'
 import {useEffect, useState} from "react";
+import {array} from "jszip2/lib/support";
 
 const Cezar = async () => {
-    var UserText = await document.getElementById('text-to-work');
-    var UserSelectStap = await document.getElementById('encrypt-step');
-    var result = await document.getElementById('output');
-    var Encrypt = await document.getElementById('encrypt-btn');
-    var Decrypt = await document.getElementById('decrypt-btn');
-    var Reset = await document.getElementById('btn-reset');
-    var UserStep = Number(UserSelectStap.value);
+    let UserText = await document.getElementById('text-to-work');
+    let UserSelectStap = await document.getElementById('encrypt-step');
+    let result = await document.getElementById('output');
+    let Encrypt = await document.getElementById('encrypt-btn');
+    let Reset = await document.getElementById('btn-reset');
+    let UserStep = Number(UserSelectStap.value);
 
-    var TextToWork;
-    var pos;
+    let TextToWork;
+    let pos;
 
-    var OtherSymbols = [' ', ',', '.', ':', ';', '!', '?', '-', '_', '=', '+', '(', ')', '[', ']', '@', '`', "'", '"', '<', '>', '|', '/', '%', '$', '^', '&', '*', '~'];
-    var Numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-    var RusAlfUp = ['А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З', 'И', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Ъ', 'Ы', 'Ь', 'Э', 'Ю', 'Я'];
-    var RusAlfLower = ['а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я'];
-    var EngAlfUp = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-    var EngAlfLower = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'm', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-// var UkrAlfUp = ['А','Б','В','Г','Ґ','Д','Е','Є','Ж','З','И','І','Ї','Й','К','Л','М','Н','О','П','Р','С','Т','У','Ф','Х','Ц','Ч','Ш','Щ','Ь','Ю','Я'];
-// var UkrAlfLower = ['а','б','в','г','ґ','д','е','є','ж','з','и','і','ї','й','к','л','м','н','о','п','р','с','т','у','ф','х','ц','ч','ш','щ','ь','ю','я'];
-    var RusAlfUpEncrypt = Array(33);
-    var RusAlfLowerEncrypt = Array(33);
-    var EngAlfUpEncrypt = Array(26);
-    var EngAlfLowerEncrypt = Array(26);
-// var UkrAlfUpEncrypt = Array(33);
-// var UkrAlfLowerEncrypt = Array(33);
-    var NumbersEncrypt = Array(10);
+    let OtherSymbols = [' ', ',', '.', ':', ';', '!', '?', '-', '_', '=', '+', '(', ')', '[', ']', '@', '`', "'", '"', '<', '>', '|', '/', '%', '$', '^', '&', '*', '~'];
+    let Numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+    let RusAlfUp = ['А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З', 'И', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Ъ', 'Ы', 'Ь', 'Э', 'Ю', 'Я'];
+    let RusAlfLower = ['а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я'];
+    let EngAlfUp = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+    let EngAlfLower = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'm', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    let RusAlfUpEncrypt = Array(33);
+    let RusAlfLowerEncrypt = Array(33);
+    let EngAlfUpEncrypt = Array(26);
+    let EngAlfLowerEncrypt = Array(26);
+    let NumbersEncrypt = Array(10);
+    let OtherSymbolsEncrypt = Array(OtherSymbols.length)
 
     initEncrypt();
 
@@ -52,17 +49,15 @@ const Cezar = async () => {
         NumbersEncrypt = CezarEncrypt(UserStep, Numbers);
         EngAlfUpEncrypt = CezarEncrypt(UserStep, EngAlfUp);
         EngAlfLowerEncrypt = CezarEncrypt(UserStep, EngAlfLower);
+        OtherSymbolsEncrypt = CezarEncrypt(UserStep, OtherSymbols)
     }
 
-// UkrAlfUpEncrypt = CezarEncrypt(3, UkrAlfUp);
-// UkrAlfLowerEncrypt = CezarEncrypt(3, UkrAlfLower);
-
     function CezarEncrypt(stap, arr) {
-        var CopyAlf = arr.slice();
-        var i = 0;
+        let CopyAlf = arr.slice();
+        let i = 0;
 
         while ((i + stap) < (CopyAlf.length)) {
-            var buff = CopyAlf[i];
+            let buff = CopyAlf[i];
             CopyAlf[i] = CopyAlf[i + stap];
             CopyAlf[i + stap] = buff;
             i++;
@@ -70,15 +65,11 @@ const Cezar = async () => {
         return CopyAlf;
     }
 
-// console.log(RusAlfUp);
-// console.log(RusAlfUpEncrypt);
-// console.log(RusAlfLower);
-// console.log(RusAlfLowerEncrypt);
 
     function contains(symb, arr) {
-        var letter = symb;
+        let letter = symb;
         pos = 0;
-        for (var i = 0; i < arr.length; i++) {
+        for (let i = 0; i < arr.length; i++) {
             if (letter === arr[i]) {
                 pos = i;
                 return true;
@@ -88,48 +79,46 @@ const Cezar = async () => {
     }
 
     function encrypt(text) {
-        var result = '';
-        for (var i = 0; i <= text.length; i++) {
-            var symbol = text[i];
+        let result = '';
+        for (let i = 0; i <= text.length; i++) {
+            let symbol = text[i];
             if (contains(symbol, OtherSymbols)) {
-                result += symbol;
+
+                result += OtherSymbolsEncrypt[pos];
             }
             if (contains(symbol, Numbers)) {
+
                 symbol = NumbersEncrypt[pos];
                 result += symbol;
             }
             if (contains(symbol, RusAlfUp)) {
+
                 symbol = RusAlfUpEncrypt[pos];
                 result += symbol;
             }
             if ((contains(symbol, RusAlfLower))) {
+
                 symbol = RusAlfLowerEncrypt[pos];
                 result += symbol;
             }
             if (contains(symbol, EngAlfUp)) {
+
                 symbol = EngAlfUpEncrypt[pos];
                 result += symbol;
             }
             if ((contains(symbol, EngAlfLower))) {
+
                 symbol = EngAlfLowerEncrypt[pos];
                 result += symbol;
             }
-            // if (contains(symbol, UkrAlfUp)) {
-            //     symbol = UkrAlfUpEncrypt[pos];
-            //     result += symbol;
-            // }
-            // if ((contains(symbol, UkrAlfLower))) {
-            //     symbol = UkrAlfLowerEncrypt[pos];
-            //     result += symbol;
-            // }
         }
         return result;
     }
 
     function decrypt(text) {
-        var result = '';
-        for (var i = 0; i <= text.length; i++) {
-            var symbol = text[i];
+        let result = '';
+        for (let i = 0; i <= text.length; i++) {
+            let symbol = text[i];
             if (contains(symbol, OtherSymbols)) {
                 result += symbol;
             }
@@ -153,14 +142,6 @@ const Cezar = async () => {
                 symbol = EngAlfLower[pos];
                 result += symbol;
             }
-            // if (contains(symbol, UkrAlfUpEncrypt)) {
-            //     symbol = UkrAlfUp[pos];
-            //     result += symbol;
-            // }
-            // if ((contains(symbol, UkrAlfLowerEncrypt))) {
-            //     symbol = UkrAlfLower[pos];
-            //     result += symbol;
-            // }
         }
         return result;
     }
@@ -175,6 +156,151 @@ const Cezar = async () => {
     });
 }
 
+const Trisemes = async () =>{
+    let UserText = await document.getElementById('text-to-workT');
+    let UserSelectStap = await document.getElementById('encrypt-step-formulaT');
+    let UserSelectA = await document.getElementById('encrypt-step-A');
+    let UserSelectB = await document.getElementById('encrypt-step-B');
+    let UserSelectC = await document.getElementById('encrypt-step-C');
+    let result = await document.getElementById('outputT');
+    let Encrypt = await document.getElementById('encrypt-btnT');
+    let Reset = await document.getElementById('btn-resetT');
+    let A;
+    let B;
+    let C;
+    let first = false
+    let second = false
+    if (UserSelectStap.value === "k=A*p+B"){
+        if(UserSelectA.value === "A" || UserSelectB.value === "B"){
+            alert("Не все данные выбраны корректно")
+        }else{
+            A = UserSelectA.value
+            B = UserSelectB.value
+            first = true
+        }
+    }else{
+        if(UserSelectA.value === "A" || UserSelectB.value === "B" || UserSelectC.value === "C"){
+            alert("Не все данные выбраны корректно")
+        }else{
+            A = UserSelectA.value
+            B = UserSelectB.value
+            C = UserSelectC.value
+            second = true
+        }
+    }
+
+
+    let TextToWork;
+    let pos;
+
+    let OtherSymbols = [' ', ',', '.', ':', ';', '!', '?', '-', '_', '=', '+', '(', ')', '[', ']', '@', '`', "'", '"', '<', '>', '|', '/', '%', '$', '^', '&', '*', '~'];
+    let Numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+    let RusAlfUp = ['А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З', 'И', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Ъ', 'Ы', 'Ь', 'Э', 'Ю', 'Я'];
+    let RusAlfLower = ['а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь', 'э', 'ю', 'я'];
+    let EngAlfUp = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+    let EngAlfLower = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'm', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    // let RusAlfUpEncrypt = Array(33);
+    // let RusAlfLowerEncrypt = Array(33);
+    // let EngAlfUpEncrypt = Array(26);
+    // let EngAlfLowerEncrypt = Array(26);
+    // let NumbersEncrypt = Array(10);
+    // let OtherSymbolsEncrypt = Array(OtherSymbols.length)
+    //
+    // initEncrypt();
+    //
+    // UserSelectStap.addEventListener('change', function () {
+    //     UserStep = Number(this.value);
+    //     initEncrypt();
+    // });
+
+    // function initEncrypt() {
+    //     RusAlfUpEncrypt = CezarEncrypt(UserStep, RusAlfUp);
+    //     RusAlfLowerEncrypt = CezarEncrypt(UserStep, RusAlfLower);
+    //     NumbersEncrypt = CezarEncrypt(UserStep, Numbers);
+    //     EngAlfUpEncrypt = CezarEncrypt(UserStep, EngAlfUp);
+    //     EngAlfLowerEncrypt = CezarEncrypt(UserStep, EngAlfLower);
+    //     OtherSymbolsEncrypt = CezarEncrypt(UserStep, OtherSymbols)
+    // }
+
+    // function CezarEncrypt(stap, arr) {
+    //     let CopyAlf = arr.slice();
+    //     let i = 0;
+    //
+    //     while ((i + stap) < (CopyAlf.length)) {
+    //         let buff = CopyAlf[i];
+    //         CopyAlf[i] = CopyAlf[i + stap];
+    //         CopyAlf[i + stap] = buff;
+    //         i++;
+    //     }
+    //     return CopyAlf;
+    // }
+
+    let key
+    function contains(symb, arr) {
+        let letter = symb;
+        pos = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (letter === arr[i]) {
+                pos = i;
+                if (first){
+                    key = (A*pos)+B
+                }else{
+                    key = A*(pos**2)+B*pos+C
+                }
+
+                return true;
+            }
+        }
+    }
+
+
+    function RetPos(arr){
+        return Math.floor((pos+key)%arr.length)
+    }
+
+    function encrypt(text) {
+        let result = '';
+        for (let i = 0; i <= text.length; i++) {
+            let symbol = text[i];
+            if (contains(symbol, OtherSymbols)) {
+                result += OtherSymbols[RetPos(OtherSymbols)];
+            }
+            if (contains(symbol, Numbers)) {
+                symbol = Numbers[RetPos(Numbers)];
+                result += symbol;
+            }
+            if (contains(symbol, RusAlfUp)) {
+                symbol = RusAlfUp[RetPos(RusAlfUp)];
+                result += symbol;
+            }
+            if ((contains(symbol, RusAlfLower))) {
+                symbol = RusAlfLower[RetPos(RusAlfLower)];
+                result += symbol;
+            }
+            if (contains(symbol, EngAlfUp)) {
+                symbol = EngAlfUp[RetPos(EngAlfUp)];
+                result += symbol;
+            }
+            if ((contains(symbol, EngAlfLower))) {
+                symbol = EngAlfLower[RetPos(EngAlfLower)];
+                result += symbol;
+            }
+        }
+        return result;
+    }
+
+    await Encrypt.addEventListener('click', function () {
+        TextToWork = UserText.value;
+        result.value = encrypt(TextToWork);
+    });
+    await Reset.addEventListener('click', function () {
+        UserText.value = '';
+        result.value = '';
+    });
+}
+
+
+
 const pf = new Playfair()
 
 const plEnc = () =>{
@@ -188,7 +314,7 @@ const plDec = () =>{
     const key = $("#KeyPl").val()
     const line = $("#pleyfor")
     pf.setKey(key)
-    line.val(pf.process({input: line.val(), decrypt:true}))
+    line.val(pf.process({input: line.val(), decrypt:true}).replace("X",""))
 }
 
 
@@ -255,6 +381,87 @@ export default function LR3() {
                     </div>
                     <hr className={lr1.devision_line}/>
                     <div className={style.ex_count}>Задание 2</div>
+                    <div className="container">
+                        <div className="row justify-content-around">
+                            <div className="col-md-6">
+                                <div id="encrypt-blockT">
+                                    <h3>Введите текст: </h3>
+                                    <textarea name="user-text" id="text-to-workT" cols="40" rows="3"></textarea>
+                                    <br/><br/>
+                                    <div className="form-group">
+                                        <button className="btn btn-primary" id="encrypt-btnT" onClick={Trisemes}>Зашифровать</button>
+                                        <button className="btn btn-danger" id="btn-resetT">Очистить</button>
+                                    </div>
+                                    <h4>Шаг сдвига:</h4>
+                                    <select name="user_step" id="encrypt-step-formulaT" size="1">
+                                        <option selected>k=A*p+B</option>
+                                        <option>k=A*p^2+B*p+C</option>
+                                    </select>
+                                    <select name="user_step" id="encrypt-step-A" size="1">
+                                        <option selected>A</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                        <option>13</option>
+                                        <option>14</option>
+                                        <option>15</option>
+                                        <option>16</option>
+                                    </select>
+                                    <select name="user_step" id="encrypt-step-B" size="1">
+                                        <option selected>B</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                        <option>13</option>
+                                        <option>14</option>
+                                        <option>15</option>
+                                        <option>16</option>
+                                    </select>
+                                    <select name="user_step" id="encrypt-step-C" size="1">
+                                        <option selected>C</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                        <option>13</option>
+                                        <option>14</option>
+                                        <option>15</option>
+                                        <option>16</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div className="col-md-6">
+                                <h3>Результат:</h3>
+                                <textarea readOnly id="outputT" cols="40" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
                     <hr className={lr1.devision_line}/>
                     <div className={style.ex_count}>Задание 3</div>
                     <input type="text" className={classNames(style.input, lr6.rsa_input, "mb-5")} id="KeyPl" placeholder={"Ключ"}/>

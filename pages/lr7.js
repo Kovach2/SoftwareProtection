@@ -16,7 +16,9 @@ import { Client } from 'diffie-hellman-ts'
 const alice = new Client()
 const bob = new Client()
 const alicePublicsNumber = alice.generatePublicNumber()
+console.log(alicePublicsNumber + " - Номер алисы\n\n\n")
 const bobPublicsNumber = bob.generatePublicNumber()
+console.log(bobPublicsNumber + " - Номер боба\n\n\n")
 const aliceBobSharedKey = alice.generateSharedSecret(bobPublicsNumber)
 const aliceBobSharedKeey = bob.generateSharedSecret(alicePublicsNumber)
 console.log(aliceBobSharedKey, aliceBobSharedKeey)
@@ -47,7 +49,7 @@ export default function LR7() {
                 </div>
             </header>
             <main className={style.main}>
-                <div className={style.lab_title}>Лабораторная работа №1</div>
+                <div className={style.lab_title}>Лабораторная работа №7</div>
                 <div className={lr1.labWorkinArea}>
                     <div className={style.ex_count}>Задание 1</div>
                     <p className="text-center">Данное задание генерируется в консоль из-за того, что там очень большие цифры и их нет смысла пихать на страницу, объяснять надо по коду</p>
