@@ -1,0 +1,36 @@
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.input_block{
+    display: flex;
+    max-width: 200px;
+}
+
+.input_blocks{
+    display: flex;
+    justify-content: space-between;
+}
+
+.decryption{
+    width: 80%;
+}
+
+.input_desc{
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 36px;
+    color: #fff;
+}
+
+.input{
+    width: 80%;
+}
+
+.rasshifrovka{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
