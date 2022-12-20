@@ -87,7 +87,7 @@ export default function LR1() {
 
     return (
         <div className={styles.wrapper}>
-            <PageHead title={"Лабораторная работа 1\9"}/>
+            <PageHead title={"Лабораторная работа 9"}/>
             <header className={style.header}>
                 <div className={style.header_inner}>
                     <Link href={"/"} className={classNames(style.button, style.button_header)}>
